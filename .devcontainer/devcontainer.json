@@ -1,0 +1,49 @@
+{
+  "name": "Certamen – Desarrollo de Algoritmos",
+  "image": "mcr.microsoft.com/devcontainers/python:3.11",
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-python.debugpy",
+        "ms-toolsai.jupyter"
+      ],
+      "settings": {
+        // Deshabilita GitHub Copilot completamente
+        "github.copilot.enable": {
+          "*": false,
+          "python": false,
+          "plaintext": false,
+          "markdown": false
+        },
+        "github.copilot.inlineSuggest.enable": false,
+        "github.copilot.editor.enableAutoCompletions": false,
+
+
+        // Impide instalar extensiones no autorizadas
+        "extensions.ignoreRecommendations": true,
+
+        // Oculta el panel de extensiones para que no sea obvio instalar otras
+        "workbench.activityBar.visible": true,
+
+        // Configuración del editor limpia para el certamen
+        "editor.quickSuggestions": {
+          "other": false,
+          "comments": false,
+          "strings": false
+        },
+        "editor.suggestOnTriggerCharacters": false,
+        "editor.wordBasedSuggestions": "off",
+        "editor.parameterHints.enabled": false,
+        "editor.hover.enabled": true,
+
+        // Terminal limpia
+        "terminal.integrated.defaultProfile.linux": "bash"
+      }
+    }
+  },
+
+  // Tiempo límite de inactividad (60 minutos = duración del certamen)
+  "shutdownAction": "none"
+}
